@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor// Permet de generer un constructeur avec tous les parametres pour injecter le TacheRepository
 public class TacheServiceImpl implements TacheService{
     private final TacheRepository tacheRepository;// Déclaration du repository pour les tâches
-    private final TacheService tacheService;// Déclaration du repository pour les tâches
+    // private final TacheService tacheService;// Déclaration du repository pour les tâches
 
     // Constructeur pour injecter le TacheRepository
     // public TacheServiceImpl(TacheRepository tacheRepository) {
@@ -30,11 +30,11 @@ public class TacheServiceImpl implements TacheService{
     }
 
 
-    public Optional<Tache> recupTacheParId(Long id) {
-        return  tacheService.recupererTacheParId(id);//  Récupérer une tâche par son ID, renvoie un Optional
-    }
+    // public Optional<Tache> recupTacheParId(Long id) {
+    //     return  tacheService.recupererTacheParId(id);//  Récupérer une tâche par son ID, renvoie un Optional
+    // }
 
-
+    @Override
     public Optional<Tache> recupererTacheParId(Long id) {
         return tacheRepository.findById(id); // Récupérer une tâche par son ID, renvoie un Optional
     }

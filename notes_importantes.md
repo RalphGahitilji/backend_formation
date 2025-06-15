@@ -33,3 +33,5 @@ mvn spring-boot:run // Pour lancer l'application ou ./mvnw spring-boot:run // Po
 | `SEQUENCE` | Utilise une séquence SQL   | PostgreSQL, Oracle      | Performant      | Nécessite définition d’une séquence |
 | `TABLE`    | Utilise une table spéciale | Toutes                  | Très compatible | Lenteur, surcharge                  |
 
+@RequestBody : Transforme le JSON recu en objet Java
+@PathVariable : Permet d'avoir la valeur de l'id dans l'URL
